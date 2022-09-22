@@ -5,8 +5,9 @@ import dotenv from 'dotenv'
 import seedRouter from './routes/seedRoute.js';
 import carsRouter from './routes/carsRoute.js';
 import rentRouter from './routes/rentRoute.js';
+import cors from 'cors';
 const app=express();
-
+app.use (cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
